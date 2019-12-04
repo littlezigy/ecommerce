@@ -1,0 +1,215 @@
+:root{
+    --blue: #5da8ef;
+    --grey: #333333;
+    --light-grey: #8f8f8f;
+}
+/* FONTS */
+/* POPPINS */
+@font-face {
+    font-family: "Poppins";
+    src: url(fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(fonts/Poppins/Poppins-Light.ttf);
+    font-weight: 200 300;
+}
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins/Poppins-SemiBold.ttf);
+    font-weight: 400 500;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(fonts/Poppins/Poppins-Bold.ttf) format('truetype');
+    font-weight: 500 600;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(fonts/Poppins/Poppins-Black.ttf) format('truetype');
+    font-weight: 700 900;
+}
+/* PLAYFAIR */
+@font-face {
+    font-family: "Playfair";
+    src: url(fonts/Playfair_Display/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+    font-family: Playfair;
+    src: url(fonts/Playfair_Display/PlayfairDisplay-Bold.ttf);
+    font-weight: 500 700
+}
+@font-face {
+    font-family: Playfair;
+    src: url(font/Playfair_Display/PlafairDisplay-Black.ttf);
+    font-weight: 800 900;
+}
+/* LEAGUES SPARTANS */
+@font-face {
+    font-family: "LeagueSpartan";
+    src: url(fonts/league-spartan-master/_webfonts/leaguespartan-bold.woff),
+         url(fonts/league-spartan-master/_webfonts/leaguespartan-bold.woff2),
+         url(fonts/league-spartan-master/_webfonts/leaguespartan-bold.ttf),
+         url(fonts/league-spartan-master/_webfonts/leaguespartan-bold.eot);
+}
+/*Resets*/
+body{
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+div, p, header, main, nav, body, html {
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url("../images/forest.jpeg");
+    background-size: cover;
+    min-height: 70vh;
+
+}
+
+header>div {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 6em;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 3em;
+}
+
+footer {
+    padding: 3em;
+}
+
+/* TEXT */
+.blue {
+    color: var(--blue);
+}
+.grey {
+    color: var(--grey);
+}
+.light-grey {
+    color: var(--light-grey);
+}
+.caps {
+    text-transform: uppercase;
+}
+.lightest {
+    font-weight: 100;
+}
+.light {
+    font-weight: 300;
+}
+.bold {
+    font-weight: 600;
+}
+.black {
+    font-weight: 900;
+}
+
+.kerning {
+    letter-spacing: 0.3em;
+}
+.kerning1 {
+    letter-spacing: 0.5em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font1 {
+    font-family: Poppins;
+}
+
+.font2 {
+    font-family: Playfair;
+}
+
+.font3 {
+    font-family: LeagueSpartan;
+}
+
+/* SIZE */
+.small {
+    font-size: 0.7em;
+}
+.tiny {
+    font-size: 0.5em;
+}
+.increase {
+    font-size: 1.2em;
+}
+.medium {
+    font-size: 1.6em;
+}
+.bigger {
+    font-size: 2em;
+}
+.biggest {
+    font-size: 4em;
+}
+.title {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.underline {
+    border-bottom: 2px solid;
+}
+.border {
+    border: 2px solid;
+}
+
+.blue-border {
+    border-color: var(--blue);
+}
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+div#contact-form input[type='text'] {
+    width: 200px;
+    height: 20px;
+    padding-right: 50px;
+}
+div#contact-form input[type='submit'] {
+    margin-left: -50px;
+    height: 25px;
+    width: 50px;
+    background: var(--blue);
+    color: white;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav div {
+    display: flex;
+}
+
+nav li {
+    padding: 0 3em;
+}
+nav img {
+    padding: 0.3em;
+    width: 6em;
+}
