@@ -8,3 +8,6 @@
 		<link href = '../styles/main.css' rel='stylesheet'>
 </head>
 <body>
+<?php
+include_once("./settings.php");
+?>
