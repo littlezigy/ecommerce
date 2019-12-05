@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Deploy to website through ftp
       uses: sebastianpopp/git-ftp-action@releases/v2
-      with:
-	 url: "${{ secrets.FTP_SERVER }}"
-	 user: "${{ secrets.FTP_USERNAME }}"
-	 password: "${{ secrets.FTP_PASSWORD }}"
+      env:
+	 FTP_SERVER: ${{ secrets.FTP_SERVER }}
+	 FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+	 FTP_PASSWORD: "${{ secrets.FTP_PASSWORD }}"
