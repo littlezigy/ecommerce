@@ -13,6 +13,6 @@ jobs:
       run: echo Hello, world!
     - name: Deploy to website through ftp
       run: |
-        apt-get update,
-        apt-get -qq install git-ftp,
+        apt-get update -qy
+        apt-get -qq install git-ftp
         git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER
