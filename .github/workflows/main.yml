@@ -3,8 +3,8 @@ name: Deployment
 on: [push]
 
 jobs:
-  deploy:
-    name: Deploy
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -12,5 +12,5 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
 	 FTP_SERVER: "files.000webhost.com"
-	 FTP_USERNAME: $FTP_USERNAME
+	 FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
 	 FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
