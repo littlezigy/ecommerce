@@ -11,6 +11,6 @@ jobs:
     - name: Deploy to website through ftp
       uses: sebastianpopp/git-ftp-action@releases/v2
       with:
-	url: ${{ secrets.FTP_SERVER }}
-	user: ${{ secrets.FTP_USERNAME }}
-	password: ${{ secrets.FTP_PASSWORD }}
+	 url: ${{ secrets.FTP_SERVER }}
+	 user: ${{ secrets.FTP_USERNAME }}
+	 password: ${{ secrets.FTP_PASSWORD }}
