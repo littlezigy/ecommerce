@@ -9,7 +9,3 @@
 		<link href = '<?= $site_dir ?>/styles/main.css' rel='stylesheet'>
 </head>
 <body>
-<?php
-  $path = '/settings.php';
-  include_once($path);
-?>
