@@ -9,8 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Deploy to website through ftp
-      uses: sebastianpopp/git-ftp-action@releases/v2
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
 	 FTP_SERVER: "files.000webhost.com"
 	 FTP_USERNAME: $FTP_USERNAME
-	 FTP_PASSWORD: $FTP_PASSWORD
+	 FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
