@@ -5,3 +5,5 @@
 	
 	<p><a>Admin Panel</a></p>
 </footer>
+</body>
+</html>
