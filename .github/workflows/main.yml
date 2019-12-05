@@ -11,7 +11,6 @@ jobs:
 
     - name: FTP-Deploy-Action
       uses: sebastianpopp/git-ftp-action@releases/v2
-      run: git ftp init --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_SERVER
       with:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
