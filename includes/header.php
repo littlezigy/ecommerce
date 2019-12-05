@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Zigy Demo Store</title>
-		<link href = '../styles/main.css' rel='stylesheet'>
+		<link href = '<?= $site_dir ?>styles/main.css' rel='stylesheet'>
 </head>
 <body>
 <?php
-include_once("./settings.php");
+  include_once("/settings.php");
 ?>
