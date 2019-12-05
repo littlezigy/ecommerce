@@ -2,7 +2,7 @@
  include_once("./includes/header.php");
  ?>
 <header>
-	<nav>
+	<nav class = 'text-white bold'>
 		<a><img src = './images/logo.png'></a>
 		<div>
 			<li><a href = 'pages/login.php'>Login</a></li>

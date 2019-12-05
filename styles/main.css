@@ -57,6 +57,7 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 p {
     margin: 0;
@@ -68,12 +69,20 @@ li {
 div, p, header, main, nav, body, html {
     box-sizing: border-box;
 }
+a, a:visited, a:active {
+    color: inherit;
+    text-decoration: inherit; 
+}
 
 header {
-    background-image: url("../images/forest.jpeg");
+    background-image: radial-gradient(circle at 0% 0%, rgba(233, 45, 246, 1), 20%, rgba(233, 45, 246, 0.001) 27%),
+                      radial-gradient(circle at 50% 100%, rgba(233, 45, 246, 1), 20%, rgba(233, 45, 246, 0.001) 40%),
+                      radial-gradient(circle at 3% 100%, rgb(220, 235, 51, 1), 20%, rgb(220, 235, 51, 0.1) 25%),
+                      radial-gradient(circle at 95% 0%, rgba(100, 50, 149, 1), 30%, rgba(100, 50, 149, 0.1) 40%),
+                      radial-gradient(circle at 50% 40%, rgba(86, 173, 235, 1), 70%,rgba(86, 173, 235, 0.42));
     background-size: cover;
-    min-height: 70vh;
-
+    min-height: 80vh;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 header>div {
@@ -92,16 +101,18 @@ section {
 
 footer {
     padding: 3em;
+    color: white;
+    background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/dark_embroidery.png);
 }
 
 /* TEXT */
-.blue {
+.text-blue {
     color: var(--blue);
 }
-.grey {
+.text-grey {
     color: var(--grey);
 }
-.light-grey {
+.text-light-grey {
     color: var(--light-grey);
 }
 .caps {
@@ -126,7 +137,9 @@ footer {
 .kerning1 {
     letter-spacing: 0.5em;
 }
-
+.text-white {
+    color: white;
+}
 .text-center {
     text-align: center;
 }
