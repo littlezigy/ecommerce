@@ -12,5 +12,5 @@ jobs:
       uses: sebastianpopp/git-ftp-action@releases/v2
       env:
 	 FTP_SERVER: "files.000webhost.com"
-	 FTP_USERNAME: ${ secrets.FTP_USERNAME }
-	 FTP_PASSWORD: $secrets.FTP_PASSWORD
+	 FTP_USERNAME: $FTP_USERNAME
+	 FTP_PASSWORD: $FTP_PASSWORD
