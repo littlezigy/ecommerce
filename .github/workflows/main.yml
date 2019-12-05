@@ -8,9 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Deploy to website through ftp
+
+    - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
-	 FTP_SERVER: "files.000webhost.com"
-	 FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-	 FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        FTP_SERVER: ftp.samkirkland.com
+        FTP_USERNAME:   - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
