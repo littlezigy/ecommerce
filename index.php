@@ -1,25 +1,28 @@
 <?php
  include_once("./includes/header.php");
  ?>
-<header>
+<header class = 'font1 text-white text-center'>
 	<nav class = 'text-white bold'>
-		<a><img src = './images/logo.png'></a>
+		<a><img class = 'logo' src = './images/43643.png'></a>
 		<div>
-			<li><a href = 'pages/login.php'>Login</a></li>
-			<li><a href = 'pages/cart.php'>Cart</a></li>
+			<li><a>Login</a></li>
+			<li><a>Cart</a></li>
 		</div>
 	</nav>
 	<div>
-		<p class = 'biggest bold'>The only limitation is your imagination</p>
-		<p class = 'medium'>Dream it. Wish it. Get it</p>
+		<div id = 'headertext' class = 'font4'>
+			<p id = 'headertitle'>ColorStores</p>
+			<p class = 'medium'>Like it? Get it</p>
+		</div>
 	</div>
 </header>
 <section>
 	<!----Blurb section-->
 </section>
 
-<section id = 'showcase'>
+<section id = 'showcase' class = 'text-center p6'>
 	<p class = 'biggest text-center'>Best Performing Items</p>
+	<p>Coming Soon!</p>
 </section>
 
 <?php

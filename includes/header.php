@@ -8,4 +8,4 @@
 		<title>Zigy Demo Store</title>
 		<link href = '/styles/main.css' rel='stylesheet'>
 </head>
-<body>
+<body class = 'font1'>

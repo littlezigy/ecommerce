@@ -7,51 +7,57 @@
 /* POPPINS */
 @font-face {
     font-family: "Poppins";
-    src: url(fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+    src: url(../fonts/Poppins/Poppins-Regular.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url(fonts/Poppins/Poppins-Light.ttf);
+    src: url(../fonts/Poppins/Poppins-Light.ttf);
     font-weight: 200 300;
 }
 @font-face {
     font-family: Poppins;
-    src: url(fonts/Poppins/Poppins-SemiBold.ttf);
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
     font-weight: 400 500;
 }
 @font-face {
     font-family: "Poppins";
-    src: url(fonts/Poppins/Poppins-Bold.ttf) format('truetype');
+    src: url(../fonts/Poppins/Poppins-Bold.ttf) format('truetype');
     font-weight: 500 600;
 }
 @font-face {
     font-family: "Poppins";
-    src: url(fonts/Poppins/Poppins-Black.ttf) format('truetype');
+    src: url(../fonts/Poppins/Poppins-Black.ttf) format('truetype');
     font-weight: 700 900;
 }
 /* PLAYFAIR */
 @font-face {
     font-family: "Playfair";
-    src: url(fonts/Playfair_Display/PlayfairDisplay-Regular.ttf);
+    src: url(../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf);
 }
 @font-face {
     font-family: Playfair;
-    src: url(fonts/Playfair_Display/PlayfairDisplay-Bold.ttf);
+    src: url(../fonts/Playfair_Display/PlayfairDisplay-Bold.ttf);
     font-weight: 500 700
 }
 @font-face {
     font-family: Playfair;
-    src: url(font/Playfair_Display/PlafairDisplay-Black.ttf);
+    src: url(../font/Playfair_Display/PlafairDisplay-Black.ttf);
     font-weight: 800 900;
 }
 /* LEAGUES SPARTANS */
 @font-face {
     font-family: "LeagueSpartan";
-    src: url(fonts/league-spartan-master/_webfonts/leaguespartan-bold.woff),
-         url(fonts/league-spartan-master/_webfonts/leaguespartan-bold.woff2),
-         url(fonts/league-spartan-master/_webfonts/leaguespartan-bold.ttf),
-         url(fonts/league-spartan-master/_webfonts/leaguespartan-bold.eot);
+    src: url(../fonts/league-spartan-master/_webfonts/leaguespartan-bold.woff),
+         url(../fonts/league-spartan-master/_webfonts/leaguespartan-bold.woff2),
+         url(../fonts/league-spartan-master/_webfonts/leaguespartan-bold.ttf),
+         url(../fonts/league-spartan-master/_webfonts/leaguespartan-bold.eot);
+}
+
+/* FINGER PAINT */
+@font-face {
+    font-family: "FingerPaint";
+    src: url(../fonts/FingerPaint/FingerPaint-Regular.ttf);
 }
 /*Resets*/
 body{
@@ -77,12 +83,13 @@ a, a:visited, a:active {
 header {
     background-image: radial-gradient(circle at 0% 0%, rgba(233, 45, 246, 1), 20%, rgba(233, 45, 246, 0.001) 27%),
                       radial-gradient(circle at 50% 100%, rgba(233, 45, 246, 1), 20%, rgba(233, 45, 246, 0.001) 40%),
-                      radial-gradient(circle at 3% 100%, rgb(220, 235, 51, 1), 20%, rgb(220, 235, 51, 0.1) 25%),
+                      radial-gradient(circle at 3% 100%, rgb(88, 51, 235), 20%, rgba(198, 235, 51, 0.1) 25%),
                       radial-gradient(circle at 95% 0%, rgba(100, 50, 149, 1), 30%, rgba(100, 50, 149, 0.1) 40%),
-                      radial-gradient(circle at 50% 40%, rgba(86, 173, 235, 1), 70%,rgba(86, 173, 235, 0.42));
+                      radial-gradient(circle at 50% 40%, rgba(86, 173, 235, 1), 70%,rgba(86, 173, 235, 0.18));
     background-size: cover;
     min-height: 80vh;
     font-family: 'Times New Roman', Times, serif;
+    padding: 3em 2em;
 }
 
 header>div {
@@ -91,8 +98,39 @@ header>div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 6em;
     box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+nav div li a {
+    padding: 0.4em 3em;
+    cursor: pointer;
+}
+nav div li a:hover {
+    color: black;
+    background-color: white;
+}
+
+nav img.logo {
+    filter: saturate(500%) invert(1);
+    height: 4em;
+}
+#headertitle {
+    font-size: 14vw;
+}
+#headertext {
+    border: 2px solid white;
+    background-color: white;
+    mix-blend-mode: screen;
+    color: black;
 }
 
 section {
@@ -102,7 +140,7 @@ section {
 footer {
     padding: 3em;
     color: white;
-    background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/dark_embroidery.png);
+    background-image: url("/images/dark_embroidery.png");
 }
 
 /* TEXT */
@@ -134,6 +172,9 @@ footer {
 .kerning {
     letter-spacing: 0.3em;
 }
+.p6 {
+    padding: 10em 0;
+}
 .kerning1 {
     letter-spacing: 0.5em;
 }
@@ -155,7 +196,9 @@ footer {
 .font3 {
     font-family: LeagueSpartan;
 }
-
+.font4 {
+    font-family: FingerPaint;
+}
 /* SIZE */
 .small {
     font-size: 0.7em;
@@ -208,21 +251,4 @@ div#contact-form input[type='submit'] {
     color: white;
     border: 0;
     -webkit-appearance: none;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-nav div {
-    display: flex;
-}
-
-nav li {
-    padding: 0 3em;
-}
-nav img {
-    padding: 0.3em;
-    width: 6em;
 }
