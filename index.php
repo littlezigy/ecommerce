@@ -1,5 +1,8 @@
 <?php
  include_once("./includes/header.php");
+ $url = 'http://localhost:3001/api/v1/products?sort=bestof&limit=3';
+ $response = file_get_contents($url);
+ $products = json_decode($response);
  ?>
 <header class = 'font1 text-white text-center'>
 	<nav class = 'text-white bold'>
@@ -20,9 +23,26 @@
 	<!----Blurb section-->
 </section>
 
-<section id = 'showcase' class = 'text-center p6'>
+<section id = 'showcase' class = 'p6'>
 	<p class = 'biggest text-center'>Best Performing Items</p>
-	<p>Coming Soon!</p>
+	<div class = 'products'>
+	<?php
+		 foreach($products as $product) {
+		   echo "<div class = 'card product'>";
+		   echo "<img class = 'product'/>";
+		   echo "<p class = 'text-right price'>N ". $product->price . "</p>";
+		   echo "<p class = 'text-center text-2'>" . $product->name . "</p>";
+		   if($product->brand) echo "<p class = 'brand small text-right'> by " . $product->brand . "</p>";
+		   else echo "<br />";
+		   echo "<p class = 'description'>";
+		   if($product->desc) echo $product->desc . "</p>";
+		   else echo "This is a great product judging by the fact that it is in this category</p>";
+		   echo "<p class = 'stock'>Quantity in stock " . $product->instock . "</p>";
+		   echo "</div>";
+		 }
+
+	?>
+	</div>
 </section>
 
 <?php
