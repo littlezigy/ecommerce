@@ -4,6 +4,7 @@
 	<p>Hi there. ColorStore is a demo ecommerce webapp.</p>
 	
 	<p><a>Admin Panel</a></p>
+	<script src = "/scripts/main.js"></script>
 </footer>
 </body>
 </html>
