@@ -1,6 +1,10 @@
 <?php
 require __DIR__ . "/views/main.view.php";
 require __DIR__ . "/views/pages.view.php";
+require __DIR__ . "/models/main.model.php";
+require __DIR__ . "/models/env.php";
+require __DIR__ . "/models/api.php";
+require __DIR__ . "/models/curl.php";
 
 include_once("./includes/header.php");
 
@@ -9,7 +13,14 @@ $url = (isset($_SERVER['PATH_INFO'])) ? $_SERVER['PATH_INFO'] : "/";
 $page = new Page();
 
 if($url === '/') {
-	$page->home();
+	require __DIR__ . "/models/productlist.model.php";
+	require __DIR__ . "/controllers/home.controller.php";
+	$curl = new Curl();
+	$api = new API($curl);
+	$productlist = new ProductList($api, 3);
+	$homecontroller = new HomeController();
+	$homecontroller->loadHomePage($productlist);
+	$page->home($productlist);
 } else {
 	if($url === '/login') {
 		if(isset($_SESSION['user'])) {

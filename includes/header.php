@@ -1,6 +1,5 @@
 <?php
 	if(file_exists('php.ini')) include 'php.ini';
-	require(__DIR__ . '/../config/config.php');
 	session_start();
 ?>
 <!DOCTYPE html>

@@ -9,15 +9,23 @@ Class Page extends View {
     /**
      * Function for viewing the homepage
      */
-    public function home() {
+    public function home($productlist) {
         echo "<!--HOME-->";
+        $bestproducts = $productlist->getProducts();
+        var_dump($bestproducts);
         $no_navbar = true;
         echo "<!-- NAVBAR: $no_navbar-->";
-        $contents = $this->view->loadTemplate("home", array("user" => $this->user));
+        foreach($bestproducts as $products) {
+            if($products['shortdesc_'] == '') {
+                $products['shortdesc_'] = "This is a great product judging by the fact that it is in this category";
+            }
+        }
+        $contents = $this->view->loadTemplate("home", array("user" => $this->user, "bestproducts" => $bestproducts));
         $this->view->build_page($contents, array("no_navbar" => true));
     }
 
     public function login() {
+        echo "<script>window.location.replace('/')</script>";
         $contents = $this->view->loadTemplate('login');
         $this->view->build_page($contents);
     }
