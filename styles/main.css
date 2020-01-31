@@ -6,63 +6,8 @@
 	--dark-purple: #643295;
     --grey: #333333;
     --light-grey: #8f8f8f;
-	--orange: #ff9236;
-}
-/* FONTS */
-/* POPPINS */
-@font-face {
-    font-family: "Poppins";
-    src: url(../fonts/Poppins/Poppins-Regular.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: "Poppins";
-    src: url(../fonts/Poppins/Poppins-Light.ttf);
-    font-weight: 200 300;
-}
-@font-face {
-    font-family: Poppins;
-    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
-    font-weight: 400 500;
-}
-@font-face {
-    font-family: "Poppins";
-    src: url(../fonts/Poppins/Poppins-Bold.ttf) format('truetype');
-    font-weight: 500 600;
-}
-@font-face {
-    font-family: "Poppins";
-    src: url(../fonts/Poppins/Poppins-Black.ttf) format('truetype');
-    font-weight: 700 900;
-}
-/* PLAYFAIR */
-@font-face {
-    font-family: "Playfair";
-    src: url(../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf);
-}
-@font-face {
-    font-family: Playfair;
-    src: url(../fonts/Playfair_Display/PlayfairDisplay-Bold.ttf);
-    font-weight: 500 700
-}
-@font-face {
-    font-family: Playfair;
-    src: url(../font/Playfair_Display/PlafairDisplay-Black.ttf);
-    font-weight: 800 900;
-}
-/* LEAGUES SPARTANS */
-@font-face {
-    font-family: "LeagueSpartan";
-    src: url(../fonts/league-spartan-master/_webfonts/leaguespartan-bold.woff),
-         url(../fonts/league-spartan-master/_webfonts/leaguespartan-bold.woff2),
-         url(../fonts/league-spartan-master/_webfonts/leaguespartan-bold.ttf),
-         url(../fonts/league-spartan-master/_webfonts/leaguespartan-bold.eot);
-}
-
-/* FINGER PAINT */
-@font-face {
-    font-family: "FingerPaint";
-    src: url(../fonts/FingerPaint/FingerPaint-Regular.ttf);
+    --orange: #ff9236;
+    --fail: #f5c0ba;
 }
 /*Resets*/
 body{
@@ -81,77 +26,10 @@ li {
 div, p, header, main, nav, body, html, form {
     box-sizing: border-box;
 }
-a, a:visited, a:active {
+a, a:visited, a:active a:link{
     color: inherit;
     text-decoration: inherit; 
 }
-
-header {
-    background-image: radial-gradient(circle at 0% 0%, rgba(233, 45, 246, 1), 20%, rgba(233, 45, 246, 0.001) 27%),
-                      radial-gradient(circle at 50% 100%, rgba(233, 45, 246, 1), 20%, rgba(233, 45, 246, 0.001) 40%),
-                      radial-gradient(circle at 3% 100%, rgb(88, 51, 235), 20%, rgba(198, 235, 51, 0.1) 25%),
-                      radial-gradient(circle at 95% 0%, rgba(100, 50, 149, 1), 30%, rgba(100, 50, 149, 0.1) 40%),
-                      radial-gradient(circle at 50% 40%, rgba(86, 173, 235, 1), 70%,rgba(86, 173, 235, 0.18));
-    background-size: cover;
-    min-height: 80vh;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 3em 2em;
-}
-
-header>div {
-    width: 100%;
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-nav div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-nav div li a {
-    padding: 0.4em 3em;
-    cursor: pointer;
-}
-nav div li a:hover {
-    color: black;
-    background-color: white;
-}
-
-nav img.logo {
-    filter: saturate(500%) invert(1);
-    height: 4em;
-	padding: 0.7em 1em 0.2em 1em;
-}
-#headertitle {
-    font-size: 14vw;
-}
-#headertext {
-    border: 2px solid white;
-    background-color: white;
-    mix-blend-mode: screen;
-    color: black;
-}
-
-section {
-    padding: 0 3em;
-	margin: 3em 0;
-	overflow-x: hidden;
-}
-
-footer {
-    padding: 3em;
-    color: white;
-    background-image: url("/images/dark_embroidery.png");
-}
-
 /* TEXT */
 .text-blue {
     color: var(--blue);
@@ -242,6 +120,20 @@ footer {
 .text-3 {
     font-size: 1.8rem;
 }
+.big {
+    font-size: 3em;
+}
+.bigger {
+    font-size: 4em;
+}
+.large {
+    font-size: 10em;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: 600;
+}
 .title-1 {
     font-size: 2em;
 	margin-bottom: 0.7em;
@@ -249,13 +141,6 @@ footer {
 .title-2 {
 	font-size: 2.2em;
 	margin-bottom: 1em;
-}
-.biggest {
-    font-size: 4em;
-}
-.title {
-    font-size: 3em;
-    font-weight: 600;
 }
 
 .underline {
@@ -292,6 +177,10 @@ footer {
 }
 .orange {
 	background-color: var(--orange);
+}
+
+.flex {
+    display: flex;
 }
 
 div#contact-form input[type='text'] {
@@ -331,64 +220,7 @@ img.product {
     margin: auto;
     display: block;
 }
-div#loginpage {
-	width: 100%;;
-	min-height: 71vh;
-	display: flex;
-}
-div#login {
-	display: flex;
-	width: 70%;
-	height: 60vh;
-	margin: auto;
-	background-color: white;
-	box-shadow: -1px 13px 20px 0px #888888;
-}
-div#login div:first-child {
-	margin-right: 1em;
-	width: 43%;
-	height: 100%;
-	background-image: radial-gradient(circle at 0% 0%, rgba(233, 45, 246, 1), 20%, rgba(233, 45, 246, 0.001) 27%),
-                      radial-gradient(circle at 50% 100%, rgba(233, 45, 246, 1), 20%, rgba(233, 45, 246, 0.001) 40%),
-                      radial-gradient(circle at 3% 100%, rgb(88, 51, 235), 20%, rgba(198, 235, 51, 0.1) 25%),
-                      radial-gradient(circle at 95% 0%, rgba(100, 50, 149, 1), 30%, rgba(100, 50, 149, 0.1) 40%),
-                      radial-gradient(circle at 50% 40%, rgba(86, 173, 235, 1), 70%,rgba(86, 173, 235, 0.18));
 
-}
-div#login form {
-	width: 57%;
-	padding: 5em;
-}
-div#login input[type=email], div#login input[type=password] {
-	width: 100%;
-	border-width: 0 0 2px 0;
-	border-bottom-style: solid;
-	padding: 1em 0.5em;
-	display: block;
-	z-index: 2;
-}
-
-div#login input+label {
-	display: block;
-	position: relative;
-}
-div#login input[type=submit], div#login input[type=button] {
-	padding: 1em;
-	width: 15em;
-	text-align: left;
-	border: none;
-	font-weight: bold;
-}
-div#login div.circularcutout {
-	width: 5em;
-	height: 5em;
-	position: relative;
-	left: -3.3em;
-	top: 43%;
-	margin-right: -6em;
-	border: 0.5em solid white;
-	border-radius: 50%;
-}
 .carousel {
 	width: fit-content;
 	position: relative;

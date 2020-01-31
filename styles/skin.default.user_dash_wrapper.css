@@ -1,0 +1,42 @@
+#user_dash_content {
+    padding: 3em;
+    border-radius: 1em  0 0 1em;
+    background: #f8f9ff;
+    overflow-x: hidden;
+    width: 100%;
+}
+#user_dash_wrapper {
+    background: var(--indigo);
+    width: 100%;
+    min-height: 72vh;
+    display: flex;
+}
+
+div#orders_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*background-color: var(--indigo);*/
+    align-items: center;
+    min-height: 60vh;
+    width: max-content;
+    color: white;
+}
+
+div#orders_menu > div {
+    display: flex;
+    flex-direction: column;
+}
+
+div#orders_menu > div a {
+    padding: 3em 0;
+}
+
+div#orders_menu > div a:hover {
+    background: rgba(255, 255, 255, 0.246);
+}
+
+p.logo {
+    font-size: 8em;
+    padding: 0 2rem;
+}

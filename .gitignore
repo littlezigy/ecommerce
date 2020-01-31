@@ -2,4 +2,5 @@ settings.php
 *.swp
 *.*.swp
 .fuse_*
+php.ini
 

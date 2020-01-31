@@ -1,0 +1,152 @@
+div.container {
+    padding: 3em;
+}
+.order_actions {
+    min-width: 10em;
+}
+
+#user_dash_content {
+    overflow-x: hidden;
+    padding: 0 !important;
+}
+
+#order-images {
+    /*margin: 1em 0;*/
+    padding: 2em 0;
+    border-bottom: 1px solid lightgrey;
+    width: fit-content;
+}
+
+#order-images img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 15px;
+    border: none;
+    background: #f8f9ff;
+    margin-right: 1.5em;
+}
+
+#order-top-row {
+    justify-content: space-between;
+    padding-right: 2em;
+}
+img.buyer_pic {
+    background: blue;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 1em;
+}
+.card {
+    width: 33.2em;
+    height: fit-content;
+    border-radius: 1.5em;
+    padding: 2em 0 2em 2em;
+    background-color: white;
+    margin-right: 2em;
+    box-shadow: 0px 5px 11px 0px #80808024 !important;
+}
+
+.date {
+    font-size: 0.8em;
+    color: grey;
+}
+
+.approve {
+    color: blue;
+}
+
+div.card.flex > div {
+    flex-shrink: 100;
+    width: 100%;
+    overflow-x:hidden;
+}
+
+.order-actions {
+    padding-top: 2em;
+}
+
+.order-actions a {
+    margin: 0 1em;
+}
+
+.filter-tabs {
+    margin: 2em 0;
+}
+.filter-tabs a {
+    margin-right: 3em;
+    padding: 2em 0;
+}
+
+.filter-tabs a.active {
+    border-bottom: 2px solid blue;
+}
+
+div#orders_table {
+    width: 100%;
+    padding: 3em;
+    background: white;
+}
+table {
+    margin-top: 2em;
+    border-spacing: 2em;
+    border-collapse: collapse;
+    width: 100%;
+}
+thead th {
+    border-top: 1px solid lightgrey;
+    color: #8b8b8b;
+    text-align: left;
+    font-weight: 400;
+    font-size: 0.9em;
+    padding: 1em 0;
+}
+td {
+    padding: 1.5em 0;
+}
+th, td {
+    border-bottom: 1px solid lightgrey;
+}
+tbody tr {
+    padding: 1.5em 0;
+}
+
+span.status {
+    padding: 0 0.4em;
+    background: grey;
+    border-radius: 1em;
+}
+
+span.status.pending {
+    background: #f5d5ba !important;
+}
+span.status.good {
+    background: rgb(223, 248, 238) !important;
+}
+span.count {
+    background: #eeeaea;
+    border-radius: 0.8em;
+    padding: 0 1em;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    color: #575757;
+}
+
+input.search {
+    padding: 0 2em 0 3em;
+    font-weight: bold;
+    height: 3em;
+}
+
+#filter {
+    padding: 0.5em;
+    color: rgb(43, 28, 92);
+    background: rgb(225, 225, 243);
+    margin: 0 1em;
+    height: 3em;
+}
+
+p.order-fee {
+    margin-left: 3em;
+}

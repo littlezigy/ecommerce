@@ -1,0 +1,8 @@
+Rewrite Engine On
+RewriteRule ^([a-zA-Z0-9\-\_\/]*)$ Webroot/$1
+
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpe?g|gif|png)$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.+)$ index.php
