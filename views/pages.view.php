@@ -12,21 +12,30 @@ Class Page extends View {
     public function home($productlist) {
         echo "<!--HOME-->";
         $bestproducts = $productlist->getProducts();
-        var_dump($bestproducts);
         $no_navbar = true;
         echo "<!-- NAVBAR: $no_navbar-->";
-        foreach($bestproducts as $products) {
-            if($products['shortdesc_'] == '') {
-                $products['shortdesc_'] = "This is a great product judging by the fact that it is in this category";
-            }
-        }
-        $contents = $this->view->loadTemplate("home", array("user" => $this->user, "bestproducts" => $bestproducts));
+
+        $contents = $this->view->loadTemplate("home", array(
+            "user" => $this->user, 
+            "bestproducts" => $bestproducts,
+            "currency" => $this->currency
+        ));
         $this->view->build_page($contents, array("no_navbar" => true));
     }
 
     public function login() {
         echo "<script>window.location.replace('/')</script>";
         $contents = $this->view->loadTemplate('login');
+        $this->view->build_page($contents);
+    }
+
+    public function products($productlistmodel, $category = 'all') {
+        $productlist = $productlistmodel->getProducts();
+        $contents = $this->view->loadTemplate('products_page', array(
+            "products" => $productlist, 
+            "currency" => $this->currency,
+            "title" => "All Products"
+        ));
         $this->view->build_page($contents);
     }
 

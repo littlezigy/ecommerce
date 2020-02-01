@@ -7,6 +7,7 @@
 				if(isset($_SESSION['user'])) echo "Welcome ".$_SESSION['user'];
 				else echo "<li><a href = 'login'>Login</a></li>";
 			?>
+			<li><a href = 'products'>Products</a></li>
 			<li><a href = 'cart'>Cart</a></li>
 		</div>
 	</nav>
@@ -21,20 +22,15 @@
 <section id = 'showcase'>
 	<p class = 'biggest text-center'>Best Performing Items</p>
 	<div class = 'products'>
-		<?php foreach($bestproducts as $product) { ?>
-			<div class = 'products carousel'>
-				<div class = 'card product'>
-					<img class = 'product' />
-					<p class = 'text-right price'>N <?= $product['price'] ?></p>
-					<p class = 'text-center text-2'><?= $product['productname'] ?></p>
-					<p class = 'brand small text-right'> by <?=$product['brand']?></p>
-					<p class = 'description text-justify'>
-						<?=$product['shortdesc_']?> 	
-					</p>
-				   <p class = 'stock'>Quantity in stock <?=$product['qty_available']?></p>
-				</div>
-			</div>
-			<button class = 'carousel-button'> </button>
-		<?php }?>
+		<?php foreach($bestproducts as $product) {
+			include __DIR__ . "/../partials/product_card1.tpl";
+		}?>
+
+		<button class = 'carousel-button'> </button>
 	</div>
-	</section>
+</section>
+
+<section id = 'mall-owners'>
+	<p class = 'biggest text-center'>Mall Owners of the Week</p>
+
+</section>

@@ -6,6 +6,8 @@ require __DIR__ . "/models/env.php";
 require __DIR__ . "/models/api.php";
 require __DIR__ . "/models/curl.php";
 
+require __DIR__ . "/models/productlist.model.php";
+
 include_once("./includes/header.php");
 
 $url = (isset($_SERVER['PATH_INFO'])) ? $_SERVER['PATH_INFO'] : "/";
@@ -13,7 +15,6 @@ $url = (isset($_SERVER['PATH_INFO'])) ? $_SERVER['PATH_INFO'] : "/";
 $page = new Page();
 
 if($url === '/') {
-	require __DIR__ . "/models/productlist.model.php";
 	require __DIR__ . "/controllers/home.controller.php";
 	$curl = new Curl();
 	$api = new API($curl);
@@ -38,6 +39,11 @@ if($url === '/') {
 	} else if($url === '/dashboard/orders') {
 		echo "<!-- User orders -->";
 		$page->user_orders('buyer_orders');
+	} else if ($url === '/products') {
+		$curl = new Curl();
+		$api = new API($curl);
+		$products = new ProductList($api);
+		$page->products($products);
 	}
 	else {
 		$page->regular('notFound');

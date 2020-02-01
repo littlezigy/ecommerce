@@ -27,7 +27,6 @@ class API extends Env{
     private function returnResponseBody() {
         $response = (json_decode($this->curl->responseBody, true));
         if(array_key_exists('success', $response)) {
-            echo "Success!!!!";
             return $response['data'];
         }
     }
