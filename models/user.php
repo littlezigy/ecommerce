@@ -1,14 +1,15 @@
 <?php
 Class User {
+    private $isloggedin = false;
 
-    public function login() {
-        $curl = new Curl();
-        $curl->post($user_information);
+    public function login(String $login, String $password) {
+        $res = $this->api->post('auth/login', array("email"=>$login, "password"=>$password));
+        var_dump($res);
+
+        $_SESSION['user'] = $res->data->firstname;
     }
-}
 
-class OtherUser {
-    public function __construct() {
-
+    public function isLoggedIn() {
+        return $this->isLoggedIn;
     }
 }

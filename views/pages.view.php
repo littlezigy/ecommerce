@@ -24,7 +24,7 @@ Class Page extends View {
     }
 
     public function login() {
-        echo "<script>window.location.replace('/')</script>";
+        //echo "<script>window.location.replace('/')</script>";
         $contents = $this->view->loadTemplate('login');
         $this->view->build_page($contents);
     }
