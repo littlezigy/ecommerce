@@ -10,9 +10,7 @@ require __DIR__ . "/models/productlist.model.php";
 
 include_once("./includes/header.php");
 
-$url = (isset($_SERVER['PATH_INFO'])) ? $_SERVER['PATH_INFO'] : "/";
-echo $_SERVER['PATH_INFO'];
-echo "REQUEST URI" . $_SERVER['REQUEST_URI'];
+$url = (isset($_SERVER['REQUEST_URI'])) ? $_SERVER['REQUEST_URI'] : "/";
 //$urlarray =  (isset($_SERVER['PATH_INFO'])) ? explode('/', $_SERVER['PATH_INFO']) : '/';
 $page = new Page();
 
